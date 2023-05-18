@@ -3,10 +3,11 @@ import { GetStaticProps } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Head from 'next/head';
 import Layout from '../result/components/layout';
+import { Box } from '@chakra-ui/react';
 
 export default function CreateProjectPage() {
   return (
-    <>
+    <Box>
       <Head>
         <title>Create project - Sparkplan.AI</title>
         <meta
@@ -17,7 +18,7 @@ export default function CreateProjectPage() {
       <Layout>
         <CreateProject />
       </Layout>
-    </>
+    </Box>
   );
 }
 

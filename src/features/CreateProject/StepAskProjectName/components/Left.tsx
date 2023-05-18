@@ -49,7 +49,7 @@ export const Left = ({ form }: ILeftProps) => {
 
         <InputChatbot
           onClick={handleClick}
-          placeholder={'your_project_name'}
+          placeholder={'your project name'}
           onChange={(e: any) => setValueInput(e.target.value)}
           valueInput={valueInput}
           onKeyDown={(e: any) => {

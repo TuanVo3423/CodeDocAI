@@ -1,4 +1,4 @@
-import { Box, useToast } from '@chakra-ui/react';
+import { Box, Flex, useToast } from '@chakra-ui/react';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useForm, useWatch } from 'react-hook-form';
 import { StepAskName } from './StepAskName';
@@ -111,14 +111,17 @@ export const CreateProject = () => {
   };
 
   return (
-    <Box
-      as="form"
-      w="100vw"
-      onSubmit={handleSubmit(onSubmit)}
-      id="form-create-project"
-      onKeyDown={(e: any) => checkKeyDown(e)}
-    >
-      <AnimatePresence mode="wait">{renderStep()}</AnimatePresence>
-    </Box>
+    <Flex h="100vh">
+      <Box
+        as="form"
+        h="calc(100vh + 80px)"
+        w="100vw"
+        onSubmit={handleSubmit(onSubmit)}
+        id="form-create-project"
+        onKeyDown={(e: any) => checkKeyDown(e)}
+      >
+        <AnimatePresence mode="wait">{renderStep()}</AnimatePresence>
+      </Box>
+    </Flex>
   );
 };

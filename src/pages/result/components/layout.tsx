@@ -1,6 +1,6 @@
-import { EyeIcon } from '@/icons';
-import { AIText } from '@/ui-kit';
-import { Flex, Icon, SimpleGrid, Stack } from '@chakra-ui/react';
+import { ArrowIcon, EyeIcon } from '@/icons';
+import { AIImage, AIText } from '@/ui-kit';
+import { Flex, Icon, MenuIcon, SimpleGrid, Stack } from '@chakra-ui/react';
 import React from 'react';
 import Router from 'next/router';
 import { useRouter } from 'next/router';
@@ -10,11 +10,13 @@ type Props = {
 };
 const paths = [
   {
-    title: 'Home',
+    // title: 'Home',
+    icon: './home.svg',
     path: 'create-project',
   },
   {
-    title: 'profile',
+    // title: 'profile',
+    icon: './user.svg',
     path: 'result',
   },
   // {
@@ -24,7 +26,7 @@ const paths = [
   //     path : 'create-project'
   // },
 ];
-export default function Layout({ children }: Props) {
+export default function Layout({ children, ...rest }: Props) {
   const router = useRouter();
   const handleRouting = (path: string) => {
     router.push(`${path}`);
@@ -34,7 +36,15 @@ export default function Layout({ children }: Props) {
     <Flex>
       {children}
       <Flex>
-        <Flex p={2} bg="white" w="100vw" pos="absolute" bottom={0} left={0}>
+        <Flex
+          h="30px"
+          p={2}
+          bg="white"
+          w="100vw"
+          pos="fixed"
+          bottom={0}
+          left={0}
+        >
           {paths.map((item, idx) => (
             <Stack
               _active={{
@@ -46,8 +56,9 @@ export default function Layout({ children }: Props) {
               align="center"
               w="50%"
             >
-              <Icon as={EyeIcon} />
-              <AIText>{item.title}</AIText>
+              <AIImage url={item.icon} alt="coin" w="20px" h="20px" />
+              {/* <Icon as={ArrowIcon} /> */}
+              {/* <AIText>{item.title}</AIText> */}
             </Stack>
           ))}
 

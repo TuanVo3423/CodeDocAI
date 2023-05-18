@@ -39,9 +39,6 @@ export const LayoutAnswerQuestion = ({
       bg="url(/bg-gradient-top.png) top center no-repeat"
       bgSize="40%"
     >
-      <Flex w="100%">
-        {/* <AIImage url="/logo-bg-gradient.svg" h={{ base: '56px' }} /> */}
-      </Flex>
       <Flex
         position="relative"
         bg="text.700"
@@ -69,7 +66,7 @@ export const LayoutAnswerQuestion = ({
         </Flex>
       </Flex>
 
-      <Stack justify="center" align="center">
+      <Stack mt={4} justify="center" align="center">
         {action}
       </Stack>
     </Flex>
