@@ -16,6 +16,7 @@ import {
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import Layout from './components/layout';
+import { useRouter } from 'next/router';
 const TabLeftTitle = [
   {
     content: 'Documents',
@@ -49,6 +50,7 @@ const TabTopTitle = [
 ];
 
 function Result() {
+  const router = useRouter();
   const [isActive, setIsActive] = useState(0);
   const [isShow, setIsShow] = useState(false);
 
@@ -178,8 +180,12 @@ function Result() {
                       <Td>
                         <Button
                           colorScheme={'blue'}
-                          as={Link}
-                          href={`/result/documents/${document.selectionId}`}
+                          // as={Link}
+                          // href={`/result/documents/${document.selectionId}`}
+                          // href={`/result/documents/${document.selectionId}`}
+                          onClick={() => {
+                            router.push(`/result/documents/${document.id}`);
+                          }}
                         >
                           Watch
                         </Button>

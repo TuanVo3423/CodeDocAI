@@ -34,6 +34,7 @@ export const Right = ({ form }: IRightProps) => {
         </Stack>
 
         <InputChatbot
+          onClick={undefined}
           onChange={(e: any) => setValueInput(e.target.value)}
           valueInput={valueInput}
           onKeyDown={(e: any) => {

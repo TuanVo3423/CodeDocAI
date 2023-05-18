@@ -66,14 +66,7 @@ export const StepDocument = ({ form }: IStepStepDocumentProps) => {
   }, [selectionId]);
 
   return (
-    <Box
-      bg="text.0"
-      w="100%"
-      h="100%"
-      minH="100vh"
-      as={motion.div}
-      {...movePage}
-    >
+    <Box bg="text.0" w="100%" minH="100vh" as={motion.div} {...movePage}>
       <Header form={form} />
 
       <Flex w="100%" h="100%">
@@ -84,3 +77,4 @@ export const StepDocument = ({ form }: IStepStepDocumentProps) => {
     </Box>
   );
 };
+
