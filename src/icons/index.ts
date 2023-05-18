@@ -33,3 +33,4 @@ export * from './arrow-down';
 export * from './attachment';
 export * from './dashboard-modal-check';
 export * from './link';
+export * from './user';

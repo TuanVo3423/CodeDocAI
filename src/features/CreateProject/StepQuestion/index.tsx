@@ -145,7 +145,7 @@ export const StepQuestion = ({
                           : setActiveQuestion(idx - 1)
                       }
                     >
-                      {t('back')}
+                      Back
                     </BackTo>
 
                     <AIText lineHeight="160%">
@@ -168,7 +168,7 @@ export const StepQuestion = ({
                   onClick={() => handleNextStep(idx)}
                   isLoading={loading}
                 >
-                  {t('continue')}
+                  Continue
                 </AIButton>
               </Stack>
             </Stack>

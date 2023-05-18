@@ -1,17 +1,23 @@
+import { AttachmentIcon } from '@/icons';
 import { AIImage } from '@/ui-kit';
-import { Flex, Stack } from '@chakra-ui/react';
+import { Box, Flex, Stack } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 
 const paths = [
   {
     // title: 'Home',
     icon: './home.svg',
+    path: 'result',
+  },
+  {
+    // iconComponent: AttachmentIcon,
+    icon: './file-text.svg',
     path: 'create-project',
   },
   {
     // title: 'profile',
     icon: './user.svg',
-    path: 'result',
+    path: 'profile',
   },
   // {
   //     path : ''
@@ -28,8 +34,17 @@ const Navigation = () => {
   };
 
   return (
-    <Flex>
-      <Flex h="40px" p={2} bg="white" w="100vw" pos="fixed" bottom={0} left={0}>
+    <Box
+      w="100vw"
+      py={2}
+      bg="white"
+      borderTop={'2px solid'}
+      pos="fixed"
+      bottom={0}
+      left={0}
+      right={0}
+    >
+      <Flex>
         {paths.map((item, idx) => (
           <Stack
             _active={{
@@ -41,7 +56,9 @@ const Navigation = () => {
             align="center"
             w="50%"
           >
-            <AIImage url={item.icon} alt="coin" w="20px" h="20px" />
+            {item?.icon && (
+              <AIImage url={item.icon} alt="coin" w="20px" h="20px" />
+            )}
             {/* <Icon as={ArrowIcon} /> */}
             {/* <AIText>{item.title}</AIText> */}
           </Stack>
@@ -60,7 +77,7 @@ const Navigation = () => {
             <AIText>Create Project</AIText>
           </Stack> */}
       </Flex>
-    </Flex>
+    </Box>
   );
 };
 

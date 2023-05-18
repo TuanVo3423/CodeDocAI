@@ -77,4 +77,3 @@ export const StepDocument = ({ form }: IStepStepDocumentProps) => {
     </Box>
   );
 };
-

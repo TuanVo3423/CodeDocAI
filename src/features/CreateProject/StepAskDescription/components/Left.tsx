@@ -30,7 +30,7 @@ export const Left = ({ form }: ILeftProps) => {
 
   return (
     <LeftWrapper form={form} previousStep={'askProjectName'}>
-      <Stack spacing={7.5} w="100%">
+      <Stack spacing={7.5} w="100%" paddingBottom="60px">
         <Stack spacing={1.5}>
           <TypistCustom
             content={[
@@ -56,7 +56,7 @@ export const Left = ({ form }: ILeftProps) => {
         />
       </Stack>
 
-      <Flex w="100%" justify="center">
+      {/* <Flex w="100%" justify="center">
         <AIButton
           variant="primary-fill-while"
           type="submit"
@@ -67,7 +67,7 @@ export const Left = ({ form }: ILeftProps) => {
         >
           {t('continue')}
         </AIButton>
-      </Flex>
+      </Flex> */}
     </LeftWrapper>
   );
 };

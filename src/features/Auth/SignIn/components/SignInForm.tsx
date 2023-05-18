@@ -32,7 +32,7 @@ export const SignInForm = ({ form, isLoading }: ISignInFormProps) => {
           lineHeight="140%"
           color="text.900"
         >
-          {t('Welcome to')}
+          Welcome
         </AIText>
         <AIText
           fontWeight="bold"
@@ -61,7 +61,7 @@ export const SignInForm = ({ form, isLoading }: ISignInFormProps) => {
           fontSize="md"
           color="text.900"
         >
-          {t('forgot password')}
+          Forgot password?
         </AILink>
 
         <AIButton
@@ -71,12 +71,12 @@ export const SignInForm = ({ form, isLoading }: ISignInFormProps) => {
           rightIcon={<Icon as={ArrowIcon} w="24px" h="24px" />}
           isLoading={isLoading}
         >
-          {t('login')}
+          Login
         </AIButton>
 
         <Flex position="relative" justify="center">
           <AIText zIndex="1" bg="text.0" p="0px 10px" color="text.400">
-            {t('or continue with')}
+            or continue with
           </AIText>
           <Box
             w="100%"
@@ -105,11 +105,9 @@ export const SignInForm = ({ form, isLoading }: ISignInFormProps) => {
       </Stack>
 
       <AIText color="text.900" textAlign="center">
-        {t('dont have an account')}
-
+        Don't have an account
         <AILink href="/auth/sign-up" fontWeight="bold" color="sec.4">
-          {' '}
-          {t('sign up')}
+          Sign up
         </AILink>
       </AIText>
 

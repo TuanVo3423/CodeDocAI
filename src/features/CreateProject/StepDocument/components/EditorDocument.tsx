@@ -134,7 +134,7 @@ const EditorDocument = ({ form }: IProps) => {
   // };
 
   return (
-    <Box w="100%" h="100%">
+    <Box w="100%" h="100%" paddingBottom="50px">
       {/* <Editor
         apiKey="a5fqv7dvq9lzeg6egfnfgcq0x3tfieeqlj6cqc9cndny0i0a"
         //@ts-ignore
@@ -148,73 +148,6 @@ const EditorDocument = ({ form }: IProps) => {
           {document}
         </ReactMarkdown>
       </Box>
-
-      <Flex
-        flexDir="column"
-        p="10px 16px"
-        align="center"
-        justify="space-between"
-        borderTop="2px solid"
-        borderColor="text.100"
-        position={'fixed'}
-        bottom="0"
-        left="0"
-        right="0"
-        background={'white'}
-      >
-        {/* <Flex gap="10px">
-          <Flex align="center" gap="8px">
-            <AIImage url="/coin.svg" alt="coin" w="30px" h="30px" />
-            <AIText
-              fontSize="md"
-              color="text.900"
-              fontWeight="bold"
-              minW="60px"
-            >
-              {t('coins', { number: 3 })}
-            </AIText>
-
-            <TooltipWhatIsCoin />
-          </Flex>
-          <AIButton maxW="90px" variant="dark-fill" h="30px">
-            {t('subscribe')}
-          </AIButton>
-        </Flex> */}
-
-        {!document && (
-          <Box w="100%">
-            <LoadMore title="document_creation_in_progress" />
-          </Box>
-        )}
-
-        <Flex gap="10px">
-          <AIButton
-            w="180px"
-            variant="primary-fill-while"
-            onClick={() => {
-              // profile ? router.push('/') : router.push('/auth/sign-up');
-              // LocalStorage.set('isNewDocument', true);
-              router.push('/result');
-            }}
-            // isDisabled={!document}
-          >
-            Go to Dashboard
-          </AIButton>
-
-          <AIButton
-            w="180px"
-            variant="dark-fill"
-            onClick={() => {
-              // profile ? router.push('/') : router.push('/auth/sign-up');
-              // LocalStorage.set('isNewDocument', true);
-              // router.push('/result');
-            }}
-            // isDisabled={!document}
-          >
-            Edit Document
-          </AIButton>
-        </Flex>
-      </Flex>
     </Box>
   );
 };

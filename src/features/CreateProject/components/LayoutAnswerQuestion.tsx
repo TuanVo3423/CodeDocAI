@@ -52,9 +52,7 @@ export const LayoutAnswerQuestion = ({
       >
         <Flex gap={4} direction="column">
           <Flex align="center" justify="space-between">
-            <BackTo action={() => setValue('step', previousStep)}>
-              {t('back')}
-            </BackTo>
+            <BackTo action={() => setValue('step', previousStep)}>Back</BackTo>
 
             <AIText lineHeight="160%">{step}/14</AIText>
           </Flex>

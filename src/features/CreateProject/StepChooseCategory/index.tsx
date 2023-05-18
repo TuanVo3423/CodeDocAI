@@ -39,7 +39,7 @@ export const StepChooseCategory = ({ form }: IStepChooseCategoryProps) => {
           rightIcon={<Icon as={ArrowIcon} w="24px" h="24px" />}
           isDisabled={!categoryId}
         >
-          {t('continue')}
+          Continue
         </AIButton>
       }
     >
