@@ -15,11 +15,11 @@ export const StepAskProjectName = ({ form }: IStepAskProjectNameProps) => {
     control,
     name: 'projectName',
   });
-  useEffect(() => {
-    fetch('https://api.github.com/repos/tannerlinsley/react-query')
-      .then((res) => res.json())
-      .then((data) => console.log('data: ', data));
-  }, []);
+  // useEffect(() => {
+  //   fetch('https://api.github.com/repos/tannerlinsley/react-query')
+  //     .then((res) => res.json())
+  //     .then((data) => console.log('data: ', data));
+  // }, []);
 
   return (
     <Layout>

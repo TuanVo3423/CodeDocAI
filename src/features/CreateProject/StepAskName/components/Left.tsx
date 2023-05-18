@@ -17,6 +17,12 @@ export const Left = ({ form }: ILeftProps) => {
 
   const { control, setValue } = form;
 
+  const handleClick = () => {
+    setValue('username', valueInput);
+    setValue('step', 'askProjectName');
+    setValueInput('');
+  };
+
   const username = useWatch({
     control,
     name: 'username',
@@ -28,8 +34,8 @@ export const Left = ({ form }: ILeftProps) => {
         <Stack spacing={1.5}>
           <TypistCustom
             content={[
-              'its_wonderful_to_see_you',
-              'to_start_let_us_know_whats_your_name',
+              'Its wonderful to see you',
+              'To start let us know whats your name',
             ]}
           />
 
@@ -37,6 +43,7 @@ export const Left = ({ form }: ILeftProps) => {
         </Stack>
 
         <InputChatbot
+          onClick={handleClick}
           placeholder={'your_name'}
           onChange={(e: any) => setValueInput(e.target.value)}
           valueInput={valueInput}

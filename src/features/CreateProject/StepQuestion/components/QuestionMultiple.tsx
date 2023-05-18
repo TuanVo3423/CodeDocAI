@@ -46,13 +46,13 @@ export const QuestionMultiple = ({
     <Stack spacing={8} mt="-10px">
       <Stack spacing={4}>
         <AIText color="text.400" fontSize="sm">
-          {t('please_choose_required_features_below')}
+          {'Please choose required features below'}
         </AIText>
 
         <Flex>
           <FormControl>
             <AILabel fontSize="lg" fontWeight="bold" color="text.0" mb="16px">
-              {t('enough_for_mvp')}
+              {t('Enough for mvp')}
             </AILabel>
 
             <CheckboxGroup>

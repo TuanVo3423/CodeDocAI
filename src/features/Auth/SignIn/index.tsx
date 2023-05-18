@@ -22,28 +22,43 @@ export const SignIn = () => {
 
   const { mutateAsync: handleSignIn, isLoading } = useMutation(
     async (data: ISignIn) => {
-      // const rest = await signIn(data);
-      // return rest;
-      return {};
+      const rest = await signIn(data);
+      return rest;
+      // return {};
     },
     {
       onSuccess: (data) => {
+        // LocalStorage.set(
+        //   PROJECT_AUTH_TOKEN,
+        //   data
+        //   //    {
+        //   //   // @ts-ignore
+        //   //   id: 21,
+        //   //   name: 'Quy Tan',
+        //   //   email: 'tanquyluong@gmail.com',
+        //   //   password:
+        //   //     '$2b$10$SZIvE7JmyZtVecdqFtg6ougBINp1Dqxuhfn9YZbZKwcYdXgh1/99S',
+        //   //   createdAt: '2023-04-17T07:56:12.648Z',
+        //   // }
+        // );
         LocalStorage.set(PROJECT_AUTH_TOKEN, data);
-        LocalStorage.set('welcome', true);
-        setProfile({
-          data: {
-            // @ts-ignore
-            id: 21,
-            name: 'Quy Tan',
-            email: 'tanquyluong@gmail.com',
-            password:
-              '$2b$10$SZIvE7JmyZtVecdqFtg6ougBINp1Dqxuhfn9YZbZKwcYdXgh1/99S',
-            createdAt: '2023-04-17T07:56:12.648Z',
-          },
-          message: 'login',
-        });
-        console.log('ok');
-        router.push('/create-project');
+        // LocalStorage.set('welcome', true);
+        setProfile(data);
+        // LocalStorage.set('welcome', true);
+        // setProfile({
+        //   data: {
+        //     // @ts-ignore
+        //     id: 21,
+        //     name: 'Quy Tan',
+        //     email: 'tanquyluong@gmail.com',
+        //     password:
+        //       '$2b$10$SZIvE7JmyZtVecdqFtg6ougBINp1Dqxuhfn9YZbZKwcYdXgh1/99S',
+        //     createdAt: '2023-04-17T07:56:12.648Z',
+        //   },
+        //   message: 'login',
+        // });
+        // console.log('ok');
+        router.push('/result');
       },
       onError: (error: any) => {
         console.log(error);

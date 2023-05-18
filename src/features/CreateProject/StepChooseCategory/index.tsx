@@ -26,7 +26,7 @@ export const StepChooseCategory = ({ form }: IStepChooseCategoryProps) => {
 
   return (
     <LayoutAnswerQuestion
-      title="choose_category"
+      title="Choose category"
       previousStep={'askDescription'}
       form={form}
       step={4}

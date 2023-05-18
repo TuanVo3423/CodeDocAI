@@ -15,6 +15,12 @@ export const Left = ({ form }: ILeftProps) => {
   const { t } = useTranslation();
   const [valueInput, setValueInput] = useState('');
 
+  const handleClick = () => {
+    setValue('projectName', valueInput);
+    setValue('step', 'askDescription');
+    setValueInput('');
+  };
+
   const { control, setValue } = form;
 
   const projectName = useWatch({
@@ -33,8 +39,8 @@ export const Left = ({ form }: ILeftProps) => {
         <Stack spacing={1.5}>
           <TypistCustom
             content={[
-              t('hello_name_got_an_idea_for_a_new_project', { name: username }),
-              'cant_wait_to_hear_what_project_name_you_come_up_with',
+              `Hello ${username} got an idea for a new project`,
+              'Cant wait to hear what project name you come up with',
             ]}
           />
 
@@ -42,6 +48,7 @@ export const Left = ({ form }: ILeftProps) => {
         </Stack>
 
         <InputChatbot
+          onClick={handleClick}
           placeholder={'your_project_name'}
           onChange={(e: any) => setValueInput(e.target.value)}
           valueInput={valueInput}

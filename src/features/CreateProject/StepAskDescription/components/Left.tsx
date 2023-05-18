@@ -22,14 +22,20 @@ export const Left = ({ form }: ILeftProps) => {
     name: 'description',
   });
 
+  const handleOnCLick = () => {
+    setValue('description', valueInput);
+    setValue('step', 'chooseCategory');
+    setValueInput('');
+  };
+
   return (
     <LeftWrapper form={form} previousStep={'askProjectName'}>
       <Stack spacing={7.5} w="100%">
         <Stack spacing={1.5}>
           <TypistCustom
             content={[
-              'awesome_im_excited_to_hear_about_your_project',
-              'what_is_this_project_about',
+              'Awesome im excited to hear about your project',
+              'what is this project about',
             ]}
           />
 
@@ -37,7 +43,8 @@ export const Left = ({ form }: ILeftProps) => {
         </Stack>
 
         <InputChatbot
-          placeholder={'your_project_name'}
+          onClick={handleOnCLick}
+          placeholder={'your project_name'}
           onChange={(e: any) => setValueInput(e.target.value)}
           valueInput={valueInput}
           onKeyDown={(e: any) => {

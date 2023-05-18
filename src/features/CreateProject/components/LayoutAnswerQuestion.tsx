@@ -35,12 +35,12 @@ export const LayoutAnswerQuestion = ({
       direction="column"
       align="center"
       // h="100%"
-      // minH="100vh"
+      minH="100vh"
       bg="url(/bg-gradient-top.png) top center no-repeat"
       bgSize="40%"
     >
-      <Flex p={{ base: '24px', xxxl: '40px' }} w="100%">
-        <AIImage url="/logo-bg-gradient.svg" h={{ base: '56px' }} />
+      <Flex w="100%">
+        {/* <AIImage url="/logo-bg-gradient.svg" h={{ base: '56px' }} /> */}
       </Flex>
       <Flex
         position="relative"

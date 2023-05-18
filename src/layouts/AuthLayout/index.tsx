@@ -92,15 +92,15 @@ export const AuthLayout = ({ children }: Props) => {
     <Grid
       minH="100vh"
       p={{ base: '16px' }}
-      templateColumns={{ base: '1fr 1fr' }}
+      templateColumns={{ base: '1fr' }}
       bg="text.0"
     >
       <Box
         w="100%"
-        overflowY="auto"
-        p={{ base: '20px 100px', xxxl: '40px 168px' }}
+        // p={{ base: '20px 100px', xxxl: '40px 168px' }}
       >
         {children}
+        
       </Box>
 
       {/* <RightElement /> */}

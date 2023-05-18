@@ -10,11 +10,11 @@ export const Layout = ({ children, ...rest }: ILayoutProps) => {
       as={motion.div}
       {...movePage}
       // templateColumns={{ base: '1fr 1fr' }}
-      p="16px"
+      // p="16px"
       bg="url(/bg-gradient.png) top left no-repeat"
       bgSize="contain"
       w="100%"
-      h="100%"
+      h="calc(100vh + 200px)"
       minH="100vh"
       {...rest}
     >

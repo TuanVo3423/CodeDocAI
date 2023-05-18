@@ -12,6 +12,7 @@ interface IInputChatbotProps extends InputProps {
   valueInput: string;
   onChange: any;
   onKeyDown: any;
+  onClick: any;
 }
 
 export const InputChatbot = ({
@@ -19,6 +20,7 @@ export const InputChatbot = ({
   valueInput,
   placeholder,
   onKeyDown,
+  onClick,
 }: IInputChatbotProps) => {
   const { t } = useTranslation();
 
@@ -35,7 +37,7 @@ export const InputChatbot = ({
         value={valueInput}
         onKeyDown={onKeyDown}
       />
-      <InputRightElement w="44px" h="44px">
+      <InputRightElement onClick={onClick} w="44px" h="44px">
         <Icon as={SendIcon} w="24px" h="24px" />
       </InputRightElement>
     </InputGroup>

@@ -1,4 +1,4 @@
-import { Divider, Flex, Radio, RadioGroup, Stack } from '@chakra-ui/react';
+import { Box, Divider, Flex, Radio, RadioGroup, Stack } from '@chakra-ui/react';
 import { useState } from 'react';
 import { RadioBox } from '..';
 import _keyBy from 'lodash/keyBy';
@@ -33,16 +33,18 @@ export const QuestionSingle = ({
         >
           <Flex gap={4} flexWrap="wrap">
             {options?.map((option) => (
-              <RadioBox key={option.id}>
-                <Radio
-                  value={String(option.id)}
-                  h="80px"
-                  w="272px"
-                  p="28px 40px"
-                >
-                  {option.name}
-                </Radio>
-              </RadioBox>
+              <Box mt={4}>
+                <RadioBox key={option.id}>
+                  <Radio
+                    value={String(option.id)}
+                    h="80px"
+                    w="272px"
+                    p="6px 40px"
+                  >
+                    {option.name}
+                  </Radio>
+                </RadioBox>
+              </Box>
             ))}
           </Flex>
         </RadioGroup>

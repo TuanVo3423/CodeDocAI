@@ -19,7 +19,7 @@ export const SignUpVerifyCode = ({ form }: ISignUpVerifyCodeProps) => {
 
   return (
     <Stack spacing={{ base: 6 }} h="100%">
-      <AIImage url="/logo.png" w="54px" h="54px" />
+      {/* <AIImage url="/logo.png" w="54px" h="54px" /> */}
 
       <Flex
         gap="14px"
@@ -28,7 +28,7 @@ export const SignUpVerifyCode = ({ form }: ISignUpVerifyCodeProps) => {
         color="text.400"
       >
         <Icon as={ArrowIcon} w="24px" h="24px" transform="rotate(180deg)" />
-        <AIText>{t('back_to_main')}</AIText>
+        <AIText>{t('back to main')}</AIText>
       </Flex>
 
       <Box>

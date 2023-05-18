@@ -40,7 +40,7 @@ export const SignUpConfirmEmail = ({ form }: ISignUpConfirmEmailProps) => {
           lineHeight="140%"
           color="text.900"
         >
-          {t('welcome_to')}
+          {t('Welcome to')}
         </AIText>
         <AIText
           fontWeight="bold"
@@ -48,12 +48,12 @@ export const SignUpConfirmEmail = ({ form }: ISignUpConfirmEmailProps) => {
           lineHeight="120%"
           color="pri.2"
         >
-          Sparkplan.AI
+          CodeDocAI
         </AIText>
       </Box>
 
       <Stack spacing={4} textAlign="center">
-        <Flex gap={3.5} w="100%" justify="center">
+        {/* <Flex gap={3.5} w="100%" justify="center">
           <ButtonSignUpSocial>
             <Icon as={GoogleIcon} />
             <AIText>Google</AIText>
@@ -66,9 +66,9 @@ export const SignUpConfirmEmail = ({ form }: ISignUpConfirmEmailProps) => {
             <Icon as={SlackIcon} />
             <AIText>Slack</AIText>
           </ButtonSignUpSocial>
-        </Flex>
+        </Flex> */}
 
-        <Flex position="relative" justify="center">
+        {/* <Flex position="relative" justify="center">
           <AIText zIndex="1" bg="text.0" p="0px 10px" color="text.400">
             {t('or_continue_with')}
           </AIText>
@@ -80,14 +80,14 @@ export const SignUpConfirmEmail = ({ form }: ISignUpConfirmEmailProps) => {
             top="13px"
             zIndex="0"
           />
-        </Flex>
+        </Flex> */}
 
         <AIInput
           form={form}
           name="email"
           type="email"
-          label={'email_address'}
-          placeholder={'enter_your_email_to_continue'}
+          label={'email address'}
+          placeholder={'enter your email to continue'}
         />
 
         <AIText
@@ -102,7 +102,7 @@ export const SignUpConfirmEmail = ({ form }: ISignUpConfirmEmailProps) => {
           }}
           dangerouslySetInnerHTML={{
             __html: t(
-              'by_clicking_create_free_account_i_agree_to_sparkplan_ais_terms_and_privacy_policy'
+              'By clicking create free account i agree to sparkplan ais terms and privacy policy'
             ),
           }}
         />
@@ -114,21 +114,21 @@ export const SignUpConfirmEmail = ({ form }: ISignUpConfirmEmailProps) => {
           minW="100% !important"
           rightIcon={<Icon as={ArrowIcon} w="24px" h="24px" />}
         >
-          {t('create_free_account')}
+          {t('create free account')}
         </AIButton>
       </Stack>
 
       <AIText color="text.900" textAlign="center">
-        {t('already_have_an_account')}
+        {t('already have an account')}
 
         <AILink href="/auth/sign-in" fontWeight="bold" color="sec.4">
           {' '}
-          {t('sign_in')}
+          {t('sign in')}
         </AILink>
       </AIText>
 
       <Flex flex="1" align="flex-end">
-        <CanIHelp />
+        {/* <CanIHelp /> */}
       </Flex>
     </Stack>
   );

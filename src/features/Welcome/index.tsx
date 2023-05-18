@@ -43,7 +43,7 @@ export const Welcome = () => {
         minH="100vh"
         position="inherit"
       >
-        <AIImage url="/logo-bg-gradient.svg" h={{ base: '140px' }} />
+        {/* <AIImage url="/logo-bg-gradient.svg" h={{ base: '140px' }} /> */}
 
         <Stack spacing={5}>
           <AIText fontSize="4xl" color="text.0" fontWeight="bold">

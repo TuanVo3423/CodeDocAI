@@ -27,6 +27,10 @@ const nextConfig = {
       '/logo': { page: '/logo' },
       '/sop-document': { page: '/sop-document' },
       '/user-interface': { page: '/user-interface' },
+      '/result': { page: '/result' },
+      '/result/documents/:id?__nextDefaultLocale=:locale': {
+        page: '/result/documents/[id]',
+      },
     };
   },
   swcMinify: true,

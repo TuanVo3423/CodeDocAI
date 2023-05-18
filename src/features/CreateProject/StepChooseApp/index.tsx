@@ -32,7 +32,7 @@ export const StepChooseApp = ({ form }: IStepChooseAppProps) => {
 
   return (
     <LayoutAnswerQuestion
-      title="choose_app"
+      title="Choose app"
       previousStep={'chooseCategory'}
       form={form}
       step={5}
@@ -83,7 +83,7 @@ const RenderList = ({ form, category }: IStepChooseAppProps) => {
           borderRadius="6"
           align="center"
           overflow="hidden"
-          p="18px 24px"
+          p="6px 10px"
           opacity={appId ? (appId === item.id ? '1' : '0.2') : '1'}
           onClick={() =>
             item.status === FEATURE_STATUS.LAUNCH && setValue('appId', item.id)
@@ -109,7 +109,13 @@ const RenderList = ({ form, category }: IStepChooseAppProps) => {
             backdropFilter: 'blur(2px)',
           }}
         >
-          <AIImage url={item.thumbnail} alt="app-logo" objectFit="contain" />
+          <AIImage
+            url={item.thumbnail}
+            w="100px"
+            h="64px"
+            alt="app-logo"
+            objectFit="contain"
+          />
         </Flex>
       ))}
     </SimpleGrid>

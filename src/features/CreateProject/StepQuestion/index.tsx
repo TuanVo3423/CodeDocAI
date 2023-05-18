@@ -122,7 +122,7 @@ export const StepQuestion = ({
       bgSize="40%"
     >
       <Flex p={{ base: '24px', xxxl: '40px' }} w="100%">
-        <AIImage url="/logo-bg-gradient.svg" h={{ base: '56px' }} />
+        {/* <AIImage url="/logo-bg-gradient.svg" h={{ base: '56px' }} /> */}
       </Flex>
 
       {questions?.data?.map(
@@ -211,7 +211,7 @@ const LoadingComponent = ({ form }: { form: UseFormReturn<any> }) => {
       bgSize="40%"
     >
       <Flex p={{ base: '24px', xxxl: '40px' }} w="100%">
-        <AIImage url="/logo-bg-gradient.svg" h={{ base: '56px' }} />
+        {/* <AIImage url="/logo-bg-gradient.svg" h={{ base: '56px' }} /> */}
       </Flex>
 
       <Stack spacing={{ base: 6, xxxl: 10 }}>

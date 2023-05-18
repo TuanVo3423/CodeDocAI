@@ -37,7 +37,7 @@ const Flow = ({ form, handleGenerateDocument }: IUserFlowWithMermaidProps) => {
   return (
     <Box w="100%" p={{ base: '24px', xxxl: '40px' }} h="100vh">
       <Flex justify="space-between" align="center">
-        <AIImage url="/logo-bg-gradient.svg" h={{ base: '56px' }} />
+        {/* <AIImage url="/logo-bg-gradient.svg" h={{ base: '56px' }} /> */}
         <AIButton
           maxW="200px"
           rightIcon={<Icon as={ArrowIcon} w="20px" h="20px" />}

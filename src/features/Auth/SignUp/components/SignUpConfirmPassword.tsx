@@ -41,7 +41,7 @@ export const SignUpConfirmPassword = ({
 
   return (
     <Stack spacing={{ base: 6 }} h="100%">
-      <AIImage url="/logo.png" w="54px" h="54px" />
+      {/* <AIImage url="/logo.png" w="54px" h="54px" /> */}
 
       <Flex
         gap="14px"
@@ -50,7 +50,7 @@ export const SignUpConfirmPassword = ({
         color="text.400"
       >
         <Icon as={ArrowIcon} w="24px" h="24px" transform="rotate(180deg)" />
-        <AIText>{t('back_to_main')}</AIText>
+        <AIText>{t('back to main')}</AIText>
       </Flex>
 
       <Box>
@@ -69,16 +69,16 @@ export const SignUpConfirmPassword = ({
           form={form}
           name="email"
           type="email"
-          label={'email_address'}
-          placeholder={'enter_your_email_to_continue'}
+          label={'email address'}
+          placeholder={'enter your email to continue'}
         />
 
         <AIInput
           form={form}
           name="name"
           type="string"
-          label={'full_name'}
-          placeholder={'enter_your_email_to_continue'}
+          label={'full name'}
+          placeholder={'enter your email to continue'}
         />
 
         <AIInputPassword form={form} name="password" label="password" />
@@ -92,7 +92,7 @@ export const SignUpConfirmPassword = ({
           />
           <Flex justify="space-between">
             <AIText color="text.400" fontSize="sm">
-              {t('your_password_must_contain')}
+              {t('your password must contain')}
             </AIText>
             <AIText as="strong" color="text.900" fontSize="sm">
               {strongLevel > 80 ? t('strong') : t('weak')}
@@ -104,9 +104,9 @@ export const SignUpConfirmPassword = ({
             color="text.400"
             fontSize="sm"
           >
-            <ListItem>{t('a_symbol')}</ListItem>
-            <ListItem>{t('acapital_letters')}</ListItem>
-            <ListItem>{t('8_character_minimum')}</ListItem>
+            <ListItem>{t('a symbol')}</ListItem>
+            <ListItem>{t('acapital letters')}</ListItem>
+            <ListItem>{t('8 character minimum')}</ListItem>
           </UnorderedList>
         </Stack>
 
@@ -123,11 +123,11 @@ export const SignUpConfirmPassword = ({
       </Stack>
 
       <AIText color="text.900" textAlign="center">
-        {t('already_have_an_account')}
+        {t('already have an account')}
 
         <AILink href="/auth/sign-in" fontWeight="bold" color="sec.4">
           {' '}
-          {t('sign_in')}
+          {t('sign in')}
         </AILink>
       </AIText>
     </Stack>

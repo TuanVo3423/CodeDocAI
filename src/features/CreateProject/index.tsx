@@ -113,6 +113,7 @@ export const CreateProject = () => {
   return (
     <Box
       as="form"
+      w="100vw"
       onSubmit={handleSubmit(onSubmit)}
       id="form-create-project"
       onKeyDown={(e: any) => checkKeyDown(e)}

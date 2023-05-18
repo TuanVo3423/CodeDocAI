@@ -23,7 +23,7 @@ export const SignInForm = ({ form, isLoading }: ISignInFormProps) => {
 
   return (
     <Stack spacing={{ base: 6 }} h="100%">
-      <AIImage url="/logo.png" w="54px" h="54px" />
+      {/* <AIImage url="/logo.png" w="54px" h="54px" /> */}
 
       <Box>
         <AIText
@@ -32,7 +32,7 @@ export const SignInForm = ({ form, isLoading }: ISignInFormProps) => {
           lineHeight="140%"
           color="text.900"
         >
-          {t('welcome_to')}
+          {t('Welcome to')}
         </AIText>
         <AIText
           fontWeight="bold"
@@ -40,7 +40,7 @@ export const SignInForm = ({ form, isLoading }: ISignInFormProps) => {
           lineHeight="120%"
           color="pri.2"
         >
-          Sparkplan.AI
+          CodeDocAI
         </AIText>
       </Box>
 
@@ -49,8 +49,8 @@ export const SignInForm = ({ form, isLoading }: ISignInFormProps) => {
           form={form}
           name="email"
           type="email"
-          label={'email_address'}
-          placeholder={'enter_your_email_to_continue'}
+          label={'email address'}
+          placeholder={'enter your email to continue'}
         />
 
         <AIInputPassword form={form} name="password" label="password" />
@@ -61,7 +61,7 @@ export const SignInForm = ({ form, isLoading }: ISignInFormProps) => {
           fontSize="md"
           color="text.900"
         >
-          {t('forgot_password')}
+          {t('forgot password')}
         </AILink>
 
         <AIButton
@@ -76,7 +76,7 @@ export const SignInForm = ({ form, isLoading }: ISignInFormProps) => {
 
         <Flex position="relative" justify="center">
           <AIText zIndex="1" bg="text.0" p="0px 10px" color="text.400">
-            {t('or_continue_with')}
+            {t('or continue with')}
           </AIText>
           <Box
             w="100%"
@@ -105,11 +105,11 @@ export const SignInForm = ({ form, isLoading }: ISignInFormProps) => {
       </Stack>
 
       <AIText color="text.900" textAlign="center">
-        {t('dont_have_an_account')}
+        {t('dont have an account')}
 
         <AILink href="/auth/sign-up" fontWeight="bold" color="sec.4">
           {' '}
-          {t('sign_up')}
+          {t('sign up')}
         </AILink>
       </AIText>
 

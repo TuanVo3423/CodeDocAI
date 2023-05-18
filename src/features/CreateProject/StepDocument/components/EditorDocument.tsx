@@ -79,13 +79,14 @@ const EditorDocument = ({ form }: IProps) => {
       />
 
       <Flex
+        flexDir="column"
         p="10px 16px"
         align="center"
         justify="space-between"
         borderTop="1px solid"
         borderColor="text.100"
       >
-        <Flex gap="10px">
+        {/* <Flex gap="10px">
           <Flex align="center" gap="8px">
             <AIImage url="/coin.svg" alt="coin" w="30px" h="30px" />
             <AIText
@@ -102,7 +103,7 @@ const EditorDocument = ({ form }: IProps) => {
           <AIButton maxW="90px" variant="dark-fill" h="30px">
             {t('subscribe')}
           </AIButton>
-        </Flex>
+        </Flex> */}
 
         {!document && (
           <Box w="100%">
@@ -111,19 +112,20 @@ const EditorDocument = ({ form }: IProps) => {
         )}
 
         <Flex gap="10px">
-          <AIButton minW="180px" variant="dark-fill" isDisabled={!document}>
+          {/* <AIButton minW="180px" variant="dark-fill" isDisabled={!document}>
             {t('export_to')}
-          </AIButton>
+          </AIButton> */}
           <AIButton
-            minW="180px"
+            w="180px"
             variant="primary-fill-while"
             onClick={() => {
-              profile ? router.push('/') : router.push('/auth/sign-up');
-              LocalStorage.set('isNewDocument', true);
+              // profile ? router.push('/') : router.push('/auth/sign-up');
+              // LocalStorage.set('isNewDocument', true);
+              router.push('/result');
             }}
-            isDisabled={!document}
+            // isDisabled={!document}
           >
-            {t('save_changes')}
+            {t('Go to dashboard')}
           </AIButton>
         </Flex>
       </Flex>

@@ -30,7 +30,7 @@ export const StepDocument = ({ form }: IStepStepDocumentProps) => {
   const handleGenerateDocument = useCallback(async () => {
     toggleLoading('Generating document for your project...');
     try {
-      await generateDocument(selectionId).then((res) => console.log(res))
+      await generateDocument(selectionId).then((res) => console.log(res));
     } catch (error: any) {
       toast({
         description: error?.message,
@@ -50,7 +50,7 @@ export const StepDocument = ({ form }: IStepStepDocumentProps) => {
       setValue('document', document.data);
       return;
     }
-    const timer = setInterval(() => refetchGetDocument(), 2 * 60 * 1000); // call again 2 minutes
+    const timer = setInterval(() => refetchGetDocument(), 30 * 1000); // call again 2 minutes
 
     return () => {
       clearInterval(timer);
@@ -69,7 +69,7 @@ export const StepDocument = ({ form }: IStepStepDocumentProps) => {
       <Header form={form} />
 
       <Flex w="100%" h="100%">
-        <Left form={form} />
+        {/* <Left form={form} /> */}
 
         <EditorDocument form={form} />
       </Flex>

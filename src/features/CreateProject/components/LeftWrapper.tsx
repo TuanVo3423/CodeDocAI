@@ -28,7 +28,7 @@ export const LeftWrapper = ({
       {...rest}
     >
       {previousStep ? (
-        <BackTo action={() => setValue('step', previousStep)}>
+        <BackTo w="fit-content" action={() => setValue('step', previousStep)}>
           <AIText color="text.200">{t('back')}</AIText>
         </BackTo>
       ) : (
@@ -36,7 +36,7 @@ export const LeftWrapper = ({
       )}
 
       <Stack align="flex-start" spacing={10}>
-        <AIImage url="/logo-bg-gradient.svg" h={{ base: '120px' }} />
+        {/* <AIImage url="/logo-bg-gradient.svg" h={{ base: '120px' }} /> */}
 
         {children}
       </Stack>

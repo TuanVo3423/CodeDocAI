@@ -30,9 +30,10 @@ const App = ({ Component, pageProps }: AppProps) => {
       <QueryClientProvider client={queryClient}>
         <RouteGuard>
           <Fonts />
+
           <Component {...pageProps} />
           <GlobalLoading />
-          {LocalStorage.get('welcome') && <Welcome />}
+          {/* {LocalStorage.get('welcome') && <Welcome />} */}
         </RouteGuard>
       </QueryClientProvider>
     </ChakraProvider>

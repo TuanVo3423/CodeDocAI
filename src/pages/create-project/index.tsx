@@ -2,6 +2,7 @@ import { CreateProject } from '@/features';
 import { GetStaticProps } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Head from 'next/head';
+import Layout from '../result/components/layout';
 
 export default function CreateProjectPage() {
   return (
@@ -13,7 +14,9 @@ export default function CreateProjectPage() {
           content="Meta description for the Create project tracking page"
         />
       </Head>
-      <CreateProject />
+      <Layout>
+        <CreateProject />
+      </Layout>
     </>
   );
 }
