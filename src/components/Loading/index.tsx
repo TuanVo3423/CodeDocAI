@@ -148,7 +148,8 @@ export const LoadMore = ({ title, ...rest }: ILoadMoreProps) => {
         height="40px"
         style={{ margin: 0 }}
       />
-      {t(title)}
+      {/* {t(title)} */}
+      Document is loading...
     </Flex>
   );
 };

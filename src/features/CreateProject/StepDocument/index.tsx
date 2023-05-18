@@ -42,20 +42,28 @@ export const StepDocument = ({ form }: IStepStepDocumentProps) => {
   }, [closeLoading, selectionId, setValue, toast, toggleLoading]);
 
   useEffect(() => {
-    handleGenerateDocument();
-  }, []);
+    if (selectionId) {
+      handleGenerateDocument();
+    }
+  }, [selectionId]);
 
   useEffect(() => {
-    if (document?.data) {
-      setValue('document', document.data);
-      return;
-    }
-    const timer = setInterval(() => refetchGetDocument(), 30 * 1000); // call again 2 minutes
+    if (selectionId) {
+      if (document?.data) {
+        setValue('document', document.data);
+        return;
+      }
+      const timer = setInterval(() => refetchGetDocument(), 30 * 1000); // call again 2 minutes
 
-    return () => {
-      clearInterval(timer);
-    };
-  }, [document?.data, refetchGetDocument]);
+      return () => {
+        clearInterval(timer);
+      };
+    }
+  }, [document?.data, refetchGetDocument, selectionId]);
+
+  useEffect(() => {
+    console.log({ selectionId });
+  }, [selectionId]);
 
   return (
     <Box

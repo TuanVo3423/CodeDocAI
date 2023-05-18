@@ -18,3 +18,12 @@ export const getBriefs = async () => {
 
   return res;
 };
+
+export const getDocuments = async () => {
+  const res = await request({
+    url: `/selections`,
+    method: 'GET',
+  });
+
+  return res;
+};

@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "eslint src --max-warnings=0",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "ionic:build": "npm run build",
+    "ionic:serve": "npm run start"
   },
   "husky": {
     "hooks": {
@@ -34,6 +36,7 @@
     "@types/react-dom": "18.0.11",
     "add": "^2.0.6",
     "axios": "^1.3.4",
+    "chakra-ui-markdown-renderer": "^4.1.0",
     "eslint": "^8.37.0",
     "eslint-config-next": "13.2.4",
     "framer-motion": "^10.10.0",

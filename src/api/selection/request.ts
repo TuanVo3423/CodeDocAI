@@ -33,3 +33,11 @@ export const getDocument = async (selectionId: number) => {
   });
   return res;
 };
+
+export const getDocuments = async () => {
+  const res = await request({
+    url: `/selections`,
+    method: 'GET',
+  });
+  return res;
+};
