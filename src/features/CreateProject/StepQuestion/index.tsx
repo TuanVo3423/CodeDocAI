@@ -132,8 +132,8 @@ export const StepQuestion = ({
               <Flex
                 position="relative"
                 bg="text.700"
-                w="900px"
-                h="500px"
+                // w="900px"
+                // h="500px"
                 p={6}
                 direction="column"
                 borderRadius="16px"

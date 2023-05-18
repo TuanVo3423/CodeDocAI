@@ -71,13 +71,13 @@ const RenderList = ({ form, category }: IStepChooseAppProps) => {
   });
 
   return (
-    <SimpleGrid spacing={4} flex={1} columns={5}>
+    <SimpleGrid spacing={4} columns={3}>
       {category?.map((item) => (
         <Flex
           cursor="pointer"
           position="relative"
           key={item.id}
-          w="158px"
+          w="100px"
           h="64px"
           bg={`#FFFFFF`}
           borderRadius="6"

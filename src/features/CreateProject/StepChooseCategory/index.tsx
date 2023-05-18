@@ -65,13 +65,13 @@ const RenderList = ({ form, categories }: IStepChooseCategoryProps) => {
   });
 
   return (
-    <SimpleGrid spacing={4} flex={1} columns={5}>
+    <SimpleGrid spacing={4} flex={1} columns={3}>
       {categories?.map((item) => (
         <Flex
           cursor="pointer"
           position="relative"
           key={item.id}
-          w="158px"
+          w="100px"
           h="64px"
           bg={`linear-gradient(180deg, rgba(20, 19, 24, 0) 0%, rgba(20, 19, 24, 0.4) 100%), url(${item.thumbnail}) center no-repeat`}
           bgSize="contain"

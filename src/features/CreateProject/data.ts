@@ -107,7 +107,7 @@ export const handleSubmitForm = async ({
     await mutate.mutateAsync({ ...data, guestId });
 
     LocalStorage.set('guestId', guestId);
-    setValue('step', 'userFlow');
+    setValue('step', 'document');
   }
 };
 

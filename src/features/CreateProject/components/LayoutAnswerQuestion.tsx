@@ -34,8 +34,8 @@ export const LayoutAnswerQuestion = ({
       gap={{ base: '24px', xxxl: '40px' }}
       direction="column"
       align="center"
-      h="100%"
-      minH="100vh"
+      // h="100%"
+      // minH="100vh"
       bg="url(/bg-gradient-top.png) top center no-repeat"
       bgSize="40%"
     >
@@ -45,8 +45,8 @@ export const LayoutAnswerQuestion = ({
       <Flex
         position="relative"
         bg="text.700"
-        w="900px"
-        h="500px"
+        // w="900px"
+        // h="500px"
         p={6}
         direction="column"
         borderRadius="16px"

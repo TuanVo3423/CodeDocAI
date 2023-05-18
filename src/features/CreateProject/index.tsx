@@ -95,8 +95,8 @@ export const CreateProject = () => {
           />
         );
 
-      case 'userFlow':
-        return <StepUserFlow form={form} key="userFlow" />;
+      // case 'userFlow':
+      //   return <StepUserFlow form={form} key="userFlow" />;
 
       case 'document':
         return <StepDocument form={form} key="document" />;

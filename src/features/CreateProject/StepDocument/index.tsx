@@ -30,7 +30,7 @@ export const StepDocument = ({ form }: IStepStepDocumentProps) => {
   const handleGenerateDocument = useCallback(async () => {
     toggleLoading('Generating document for your project...');
     try {
-      await generateDocument(selectionId);
+      await generateDocument(selectionId).then((res) => console.log(res))
     } catch (error: any) {
       toast({
         description: error?.message,

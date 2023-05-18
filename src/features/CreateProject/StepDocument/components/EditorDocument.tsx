@@ -58,6 +58,7 @@ const EditorDocument = ({ form }: IProps) => {
     control,
     name: 'document',
   });
+  console.log('document: ', document);
 
   const profile = LocalStorage.get(PROJECT_AUTH_TOKEN);
 
