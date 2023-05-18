@@ -30,7 +30,7 @@ export const Left = ({ form }: ILeftProps) => {
 
   return (
     <LeftWrapper form={form}>
-      <Stack spacing={7.5} w="100%">
+      <Stack spacing={7.5} w="100%" paddingBottom="50px">
         <Stack spacing={1.5}>
           <TypistCustom
             content={[
@@ -56,7 +56,7 @@ export const Left = ({ form }: ILeftProps) => {
         />
       </Stack>
 
-      <Flex w="100%" justify="center">
+      {/* <Flex w="100%" justify="center">
         <AIButton
           variant="primary-fill-while"
           type="submit"
@@ -65,9 +65,9 @@ export const Left = ({ form }: ILeftProps) => {
           isDisabled={!username}
           rightIcon={<Icon as={ArrowIcon} w="20px" h="20px" />}
         >
-          {t('continue')}
+          Continue
         </AIButton>
-      </Flex>
+      </Flex> */}
     </LeftWrapper>
   );
 };
