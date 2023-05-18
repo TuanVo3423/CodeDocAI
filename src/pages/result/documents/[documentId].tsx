@@ -1,4 +1,5 @@
 import { StepDocument } from '@/features/CreateProject/StepDocument';
+import DocumentWatch from '@/features/Dashboard/DocumentWatch';
 import { Box } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
@@ -42,13 +43,13 @@ const DocumentPage = () => {
   const selectionId = Number(router.query.documentId);
 
   useEffect(() => {
-    //   console.log({ selectionId });
+    console.log('select id', selectionId);
     setValue('selectionId', selectionId);
   }, [selectionId]);
 
   return (
     <Box>
-      <StepDocument form={form} />
+      <DocumentWatch />
     </Box>
   );
 };
